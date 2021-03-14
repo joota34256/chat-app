@@ -7,20 +7,7 @@
   </div>
 </div>
 <div class = "messages">
-  <div class = "message">
-    <div class = "message_info">
-      <div class = "message_name">Joo</div>
-      <div class = "message_date">2021/3/5(sat) 18:00:00</div>
-    </div>
-    <div class = "message_text">初メッセ</div>
-  </div>
-  <div class = "message">
-    <div class = "message_info">
-      <div class = "message_name">masa</div>
-      <div class = "message_date">2021/3/5(sat) 20:50:00</div>
-    </div>
-    <div class = "message_text">2番目</div>
-  </div>
+  <%= render partial: 'message',collection: @messages %>
 </div>
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
   <div class="form-input">
